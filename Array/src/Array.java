@@ -1,5 +1,4 @@
 
-
 public class Array {
     public static void main(String[] args) {
         int[] num = new int[]{2,3,4,5,6,7,8};
@@ -12,6 +11,12 @@ public class Array {
 
                 """);
         int[][] arr = new int[8][8];
+        int[][][] jagged = new int[2][][];
+        jagged[0]=new int[1][];
+        jagged[1]=new int[2][];;
+        jagged[0][0]=new int[2];
+        jagged[1][0]=new int[1];
+        jagged[1][1]=new int[5];
         for(int i = 0;i< arr.length;i++)
         {
             for(int j=0;j<arr[i].length;j++)
@@ -26,6 +31,16 @@ public class Array {
                 System.out.print(j+"\t");
             }
             System.out.print('\n');
+        }
+        for(int[] i:jagged)
+        {
+            for (int[] j:i)
+            {
+                for (int k:j)
+                {
+                    System.out.println(k);
+                }
+            }
         }
 
     }
